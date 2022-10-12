@@ -6,103 +6,180 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "mainFont", sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
-li{
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
     list-style: none;
-    display: inline;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
 }
 
 body {
-    margin: 0;
+    background: #000;
     font-family: 'Noto Sans', sans-serif;
     color: #fff;
-    border: none;
-    background: #000;
-}
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #000;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-nav .profile {
-    display: flex;
-    align-items: center;
-}
-nav .profile img {
-    width: 30px;
-    height: 30px;
-}
-nav .profile h1 {
-    margin-left: 15px;
-    font-size: 20px;
-}
-nav ul {
-    display: flex;
-    list-style-type: none;
-}
-nav ul li {
-    margin-left: 20px;
-    margin-right: 25px;
-    cursor: pointer;
-    border-bottom: 1px solid #000;
-    font-size: 20px;
-}
-nav ul a {
-    margin-left: 20px;
-    margin-right: 25px;
-    cursor: pointer;
-    border-bottom: 1px solid #000;
-    font-size: 20px;
-}
-nav ul li:hover {
-    border-bottom-color: #fff;
-}
-
-.page-content {
-    margin: 4%
-}
-.page-content header{
-    margin-top: 5%;
-    max-width: 80%;
-}
-.page-content header h1{
     margin: 0;
-    text-transform: uppercase;
-    font-size: 6vw;
 }
 
-.page-content .works{
-    margin-top: 5%;
+nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    padding: 10px;
+    padding-inline: 4vh;
+    z-index: 10;
+    background: #000;
+    width: -webkit-fill-available;
 }
-.page-content .works img{
-    max-width: 100%;
-}    
-.page-content .works img:hover {
-    filter: brightness(75%);
+
+nav .nav-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+nav .nav-profile img {
+    width: 40px;
+    height: 40px;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-links a {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-links a::after {
+    position: absolute;
+    bottom: -5px;
+    content: '';
+    background: white;
+    width: 100%;
+    height: 1px;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.nav-links a:focus::after {
+    opacity: 1;
+}
+
+header {
+    margin-top: 5vh;
+    display: flex;
+    padding: 4vh;
     
-}    
+}
+
+header h2 {
+    text-transform: uppercase;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.projects-container {
+    padding-inline: 4vh;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-container li {
+    position: relative;
+    text-align: center;
+}
+
+.projects-container li h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 5vw;
+}
+
+.projects-container img {
+    max-width: 100%;
+    border-radius: 3px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.projects-container li:hover h3 {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.projects-container li:hover h3:hover {
+    opacity: 0.7;
+}
+
+.projects-container li:hover img {
+    opacity: 0.5;
+}
+
+footer {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.5em;
+    opacity: 0.6;
+}
 
 @media screen and (max-width: 700px) {
-    nav {
+    h1 {
+        display: none;
+    }
+    header {
         justify-content: center;
     }
-
-    .page-content header {
-        margin-top: 10%;
-        max-width: 100%;
-    }
-}
-
-section .header {
-    justify-content: center;
 }

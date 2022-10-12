@@ -4,85 +4,31 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=0.1">
-        <!--meta name="viewport" content="design,graphic design,packaging,packaging design,branding logo,evan le verche,feelance,portfolio"> == $0 -->
-        <title>
-            Portfolio Evan Le Verche
-        </title>
+        <meta name="description" content="design,graphic design,packaging,packaging design,branding logo, Evan Le Verche, freelance, portfolio">
+        <meta name="author" content="pseudonyme: Elv56, mail: ">
+        <link rel="shortcut icon" href=".\images\logo blanc.svg">
+        <title> Evan Le Verche </title>
         <link rel="stylesheet" href="style.css">
+        <script src="./index.js" defer></script>
     </head>
     <body>
         <nav>
-            <div class="profile">
+            <a href="./index.html" class="nav-profile">
                 <img src=".\images\logo blanc.svg" alt="logo" /> 
                 <h1>Evan Le Verche</h1>
-            </div>
-            <ul>
-                <a href="index.html"> 
-                    <li>Work</li>
-                <!--a href="CV.html"--> 
-                    <!--li>CV</li-->
-                <a href="s.html">
-                    <li>Test</li>
-                <a href=".\images\CV Graphisme.pdf" target="_blank">CV</a>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#"><h2>Work</h2></a></li>
+                <li><a href="#"><h2>Test</h2></a></li>
+                <li><a href=".\images\CV Graphisme.pdf" target="_blank">
+                    <h2>CV</h2></a>
+                </li> 
             </ul>
         </nav>
-
-        <section class="page-content">
-            <header>
-                <h1>Work</h1>
-            </header>
-            
-            <section class="works">
-                <style>
-                    .container {
-			    position: relative;
-			    width: 100%;
-		        }
-
-		    #img {
-			    width: 100%;
-			    display: block;
-		    }
-
-		    .title {
-			    background-color: rgb(0, 0, 0, 0.5);
-		/*positioned relative to parent div (container) */
-			    position: absolute;
-/* bottom margin is 0 so that it
-	coincides with container's bottom margin*/
-			    bottom: 0;		
-			    color: white;
-			    width: 100%;
-			    font-size: 25px;
-			    padding: 15px 0;
-			    text-align: center;
-			/*invisible because opacity is 0*/
-			    opacity: 0;		
-			    transition: 0.6s;
-		}
-		.container:hover .title {
-			opacity: 1;	
-		}
-                </style>
-                <div class="container">
-                    <img id="Zinga"
-                        src=".\images\Zinga Juice\zinga-1.jpg">
-                    <div class="title">Zinga Juice Project</div>
-                    <img id="Sable"
-                        src=".\images\Sable Blossom\sable-1.1920.png">
-                    <div class="title">Sable Graphic Tablet Project</div>
-                    <img id="Akira"
-                    src=".\images\Akira Pills\akira-1.1920.png">
-                <div class="title">Akira Pills</div>
-                <img id="Logos"
-                src=".\images\Logos\logo-9.1920.png">
-            <div class="title">Logos</div>
-                </div>
-                <!--img src="D:\Coding\Portfolio\images\Zinga Juice\zinga-1.jpg" alt="Zinga Juice Project" />
-                <img src="D:\Coding\Portfolio\images\Sable Blossom\sable-1.1920.png" alt="Sable Graphic Tablet Project" />
-                <img src="D:\Coding\Portfolio\images\Akira Pills\akira-1.1920.png" alt="Akira Pills Project" />
-                <img src="D:\Coding\Portfolio\images\Logos\logo-9.1920.png" alt="Logos" /-->
-            </section>
-        </section>
+        <main class="page-content">
+            <header><h2>Work</h2></header>
+            <ul class="projects-container"></ul>
+        </main>
+        <footer><h3>Copyright © 2022 All rights reserved</h3></footer>
     </body>
 </html>
