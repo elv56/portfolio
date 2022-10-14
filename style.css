@@ -112,6 +112,7 @@ header {
     margin-top: 5vh;
     display: flex;
     padding: 4vh;
+    justify-content: center;
     
 }
 
